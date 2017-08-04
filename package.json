@@ -1,0 +1,88 @@
+{
+  "name": "blame-js",
+  "version": "1.0.0",
+  "author": "Julian Hundeloh",
+  "email": "julian@hundeloh-consulting.ch",
+  "license": "MIT",
+  "description": "blame-js compares an array of source codes and outputs information about where each line originates from.",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "better-npm-run build",
+    "dev": "better-npm-run dev",
+    "test": "better-npm-run test",
+    "format": "better-npm-run format",
+    "lint": "better-npm-run lint",
+    "precommit": "npm run test && npm run format && npm run lint && npm run build && git add build",
+    "commitmsg": "validate-commit-msg",
+    "postmerge": "npm install",
+    "postrewrite": "npm install"
+  },
+  "betterScripts": {
+    "cli": {
+      "command": "node ./build/cli.js"
+    },
+    "build": {
+      "command": "rimraf ./build && webpack --progress --colors",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "dev": {
+      "command": "babel-watch ./src/index.js --inspect --source-maps",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "test": {
+      "command": "mocha --compilers js:babel-register --require babel-polyfill ./src/**/*.spec.js",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "format": {
+      "command": "prettier src/**/*.js --single-quote --trailing-comma all --no-semi --write",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "lint": {
+      "command": "eslint src/**/*.js --fix",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
+  "dependencies": {
+    "better-npm-run": "^0.1.0",
+    "diff": "^3.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.18.0",
+    "babel-plugin-typecheck": "^3.9.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-watch": "^2.0.7",
+    "chai": "^4.1.0",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-flowtype": "^2.35.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-prettier": "^2.1.2",
+    "husky": "^0.13.4",
+    "lint-staged": "^3.6.1",
+    "mocha": "^3.5.0",
+    "prettier": "^1.5.3",
+    "rimraf": "^2.6.1",
+    "validate-commit-msg": "^2.12.2",
+    "webpack": "^2.6.1"
+  }
+}

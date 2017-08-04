@@ -1,0 +1,16 @@
+{
+  "extends": ["airbnb-base/legacy", "prettier"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "plugins": ["flowtype", "prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      { "singleQuote": true, "trailingComma": "all", "semi": false }
+    ]
+  }
+}
