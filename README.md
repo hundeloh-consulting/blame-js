@@ -3,13 +3,12 @@
 ![npm](https://img.shields.io/npm/v/blame-js.svg) 
 ![license](https://img.shields.io/npm/l/blame-js.svg) 
 ![github-issues](https://img.shields.io/github/issues/hundeloh-consulting/blame-js.svg)  
-![Circle CI build status](https://circleci.com/gh/hundeloh-consulting/blame-js.svg?style=svg)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 _blame-js_ compares an array of source codes and outputs information about where each line originates from.
 Its behaviour is similar to the blame functionality that is integrated in _Git_.
 
-![nodei.co](https://nodei.co/npm/node-readme.png?downloads=true&downloadRank=true&stars=true)
+![nodei.co](https://nodei.co/npm/blame-js.png?downloads=true&downloadRank=true&stars=true)
 
 ## Install
 
@@ -98,5 +97,4 @@ See also the list of [contributors](https://github.com/hundeloh-consulting/r3con
 
 ## License
 
-This project is licensed under the AGPL-3.0+ License - see the [LICENSE.md](LICENSE.md) file for details. 
-If you are interested in other options please get in touch via [julian@hundeloh-consulting.ch](mailto:julian@hundeloh-consulting.ch).
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details. 
