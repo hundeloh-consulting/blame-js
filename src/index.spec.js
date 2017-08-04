@@ -38,8 +38,8 @@ describe('blamejs', () => {
       },
     ]
     const options: Object = {
-      getCode: (line: Object): string => line.code,
-      getOrigin: (line: Object): string => line.id,
+      getCode: (item: Object): string => item.code,
+      getOrigin: (item: Object): string => item.id,
     }
 
     expect(blamejs(codes, options)).to.be.a('Array').and.deep.equal([
@@ -149,8 +149,8 @@ describe('blamejs', () => {
       },
     ]
     const options: Object = {
-      getCode: (line: Object): string => line.code,
-      getOrigin: (line: Object): string => line.id,
+      getCode: (item: Object): string => item.code,
+      getOrigin: (item: Object): string => item.id,
     }
 
     expect(blamejs(codes, options)).to.be.a('Array').and.deep.equal([

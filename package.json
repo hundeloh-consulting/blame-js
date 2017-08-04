@@ -55,6 +55,25 @@
       }
     }
   },
+  "lint-staged": {
+    "*.js": ["prettier", "standard", "git add"]
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert"
+      ],
+      "helpMessage": "Types: feat, fix, docs, style, refactor, perf, test, chore, revert"
+    }
+  },
   "dependencies": {
     "better-npm-run": "^0.1.0",
     "diff": "^3.3.0"
