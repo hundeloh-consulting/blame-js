@@ -1,8 +1,8 @@
 # blame-js
 
-![npm](https://img.shields.io/npm/v/blame-js.svg) 
-![license](https://img.shields.io/npm/l/blame-js.svg) 
-![github-issues](https://img.shields.io/github/issues/hundeloh-consulting/blame-js.svg)  
+![npm](https://img.shields.io/npm/v/blame-js.svg)
+![license](https://img.shields.io/npm/l/blame-js.svg)
+![github-issues](https://img.shields.io/github/issues/hundeloh-consulting/blame-js.svg)
 ![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)
 
 _blame-js_ compares an array of source codes and outputs information about where each line originates from.
